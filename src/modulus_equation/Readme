@@ -1,0 +1,5 @@
+https://www.hackerrank.com/challenges/littlepandapower
+
+Input Format : The first line (input) contains T, the number of test cases. Then T input lines follow, each line containing A, B and X.
+
+Output Format : Output the value of A^B Mod X.
