@@ -36,3 +36,4 @@ target/
 # End of https://www.gitignore.io/api/java,java-web
 /extra_long_factorials/
 /array_roatation/
+/fibonacci_check/
