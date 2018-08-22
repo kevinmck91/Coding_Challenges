@@ -4,6 +4,14 @@ import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * @author kmk
+ * 
+ *         The factorial of the integer n, written n!, is defined as: n! = n x
+ *         (n-1) x (n-2) x ... x 3 x 2 x 1 Calculate and print the factorial of
+ *         a given integer.
+ *
+ */
 public class ExtraLongFactorials {
 
 	private static final Scanner scanner = new Scanner(System.in);

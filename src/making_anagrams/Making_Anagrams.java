@@ -1,5 +1,3 @@
-
-
 package making_anagrams;
 
 import java.util.ArrayList;
@@ -10,12 +8,12 @@ import java.util.TreeSet;
 /**
  * @author kmk
  * 
- * Given two strings, a and b, that may or may not be of the same length, 
- * determine the minimum number of character deletions required to make 
- * a and b anagrams. Any characters can be deleted from either of the strings.
+ *         Given two strings, a and b, that may or may not be of the same
+ *         length, determine the minimum number of character deletions required
+ *         to make a and b anagrams. Any characters can be deleted from either
+ *         of the strings.
  *
  */
-
 
 public class Making_Anagrams {
 
@@ -42,7 +40,7 @@ public class Making_Anagrams {
 				array1[currentCharNumeric - temp_integer - 1]++;
 			}
 		}
-		
+
 		int[] array2 = new int[26];
 
 		for (int i = 0; i < b.length(); i++) {
@@ -53,27 +51,23 @@ public class Making_Anagrams {
 				array2[currentCharNumeric - temp_integer - 1]++;
 			}
 		}
-		
-		// The total difference is the total amount of letters to be removed to have anagrams  
-		for(int i = 0; i < 26; i++){
+
+		// The total difference is the total amount of letters to be removed to have anagrams
+		for (int i = 0; i < 26; i++) {
 			difference += Math.abs(array1[i] - array2[i]);
 		}
-		
+
 		return difference;
 	}
 
-	
-	
-	
-	//	Method doesn't work
+	// Method doesn't work
 	static int makeAnagramAttempt(String a, String b) {
 
-		/*	
-		 *  Method wont work as it deletes duplicated from the string firstly 
-		 *  Then tries to remove the characters not present in both strings
-		 * 
+		/*
+		 * Method wont work as it deletes duplicated from the string firstly
+		 * Then tries to remove the characters not present in both strings
 		 */
-		
+
 		int count = 0;
 
 		ArrayList<Character> ALa = new ArrayList();
@@ -89,9 +83,8 @@ public class Making_Anagrams {
 		Collections.sort(ALa);
 		Collections.sort(ALb);
 
-
 		/***** Remove duplicates for either array list and increase the count **********/
-		
+
 		TreeSet<Character> hs1 = new TreeSet<Character>();
 		hs1.addAll(ALa);
 		ALa.clear();
@@ -103,13 +96,13 @@ public class Making_Anagrams {
 		ALb.clear();
 		ALb.addAll(hs2);
 		count = count + (b.length() - ALb.size());
-		
+
 		/***** Remove Non-Matches for either array list **********/
 
 		for (int i = 0; i < ALa.size(); i++) {
-		
+
 			if (ALb.contains(ALa.get(i))) {
-				
+
 			} else {
 				count++;
 			}

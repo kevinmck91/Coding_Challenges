@@ -3,20 +3,33 @@ package mastermind_game;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * @author kmk
+ * 
+ *         Mastermind is a game where the computer chooses a secret 3 digit
+ *         number and the player has to guess that number.
+ * 
+ *         The Player makes a guess and the Computer will reveal how many of the
+ *         digits are correct
+ * 
+ *         Try and complete with minimum guesses
+ *
+ */
+
 public class MastermindGame {
 
+	
 	public static void main(String[] args) {
 
 		Scanner myScanner = new Scanner(System.in);
 		int randomNum = 100 + (int) (Math.random() * 999);
-		//System.out.println(randomNum);
 
 		for (int i = 1; i > 0; i++) {
 			System.out.println("Enter Guess between 100 and 999: ");
 			int guess = myScanner.nextInt();
 
 			if (checkRange(guess)) {
-				
+
 				int difference = checkDigits(guess, randomNum);
 
 				if (difference == 0) {
@@ -25,9 +38,12 @@ public class MastermindGame {
 				}
 
 				if (difference != 0) {
-					System.out.println("incorrect by " + difference + " digits");
+					System.out
+							.println("incorrect by " + difference + " digits");
 				}
-			}else {System.out.println("number not it range");}
+			} else {
+				System.out.println("number not it range");
+			}
 		}
 
 	}
