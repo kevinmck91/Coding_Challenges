@@ -1,0 +1,5 @@
+Output Format : 
+Output the value of A^B Mod X.
+If B is negative, it calculates (A^-1 Mod X)^b Mod X
+  
+https://www.hackerrank.com/challenges/littlepandapower

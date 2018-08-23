@@ -1,0 +1,5 @@
+Mastermind is a game where the computer chooses a secret 3 digit number and the player has to guess that number.
+
+The Player makes a guess and the Computer will reveal how many of the digits are correct
+
+Try and complete with minimum guesses
