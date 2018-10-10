@@ -17,6 +17,9 @@ import java.util.Collections;
  * removals must be performed in such a way as to maximize the height.
  * 
  * Note: An empty stack is still a stack.
+ * 
+ * This is a test commit from laptop.
+ * 
  */
 
 public class EqualStacks {
