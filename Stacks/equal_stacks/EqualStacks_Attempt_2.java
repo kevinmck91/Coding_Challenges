@@ -1,7 +1,14 @@
 package equal_stacks;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.TreeMap;
+import java.util.TreeSet;
 
 import javax.swing.plaf.synth.SynthSeparatorUI;
 
@@ -10,9 +17,9 @@ public class EqualStacks_Attempt_2 {
 	
 	public static void main(String[] args) {
 
-		int[] stack1 = { 1 };
-		int[] stack2 = { 1 };
-		int[] stack3 = { 1 };
+		int[] stack1 = { 3,2,1,1,1 };
+		int[] stack2 = { 4,3,2 };
+		int[] stack3 = { 1,1,4,1 };
 		
 		int num = equalStacks(stack1, stack2, stack3);
 		System.out.println(num);
@@ -20,7 +27,8 @@ public class EqualStacks_Attempt_2 {
 	}
 
 	private static int equalStacks(int[] stack1, int[] stack2, int[] stack3) {
-
+		
+		//Reverse 3 stacks
 		ArrayList<Integer> arrayList1 = new ArrayList<>();
 		ArrayList<Integer> arrayList2 = new ArrayList<>();
 		ArrayList<Integer> arrayList3 = new ArrayList<>();
@@ -33,49 +41,50 @@ public class EqualStacks_Attempt_2 {
 		for(int index : stack3)
 			arrayList3.add(index);
 		
-		// Reverse arrayList - Uncomment for HackerRank submission.
-				
-				Collections.reverse(arrayList1); 
-				Collections.reverse(arrayList2);
-				Collections.reverse(arrayList3);
+		stack1 = arrayList1.toArray(arrayList1);
 		
-				System.out.println(arrayList1);
-				System.out.println(arrayList2);
-				System.out.println(arrayList3);
-				 
-		// Write method to add up all element of each
+		// Convert 3 arrays into 3 additive HashMaps
 		
-		ArrayList<Integer> myArrayList1 = new ArrayList<Integer>();
-		ArrayList<Integer> myArrayList2 = new ArrayList<Integer>();
-		ArrayList<Integer> myArrayList3 = new ArrayList<Integer>();
+		Map<Integer, Integer> hashMap1 = new HashMap<>();
+		Map<Integer, Integer> hashMap2 = new HashMap<>();
+		Map<Integer, Integer> hashMap3 = new HashMap<>();
 		
-		myArrayList1.add(arrayList1.get(0));
-		for(int i = 1; i < arrayList1.size(); i++) {
-			myArrayList1.add((arrayList1.get(i) + myArrayList1.get(i-1)));
+		hashMap1.put(0, stack1[0]);
+		for(int i = 1; i < stack1.length; i++) {
+			int current = stack1[i] + hashMap1.get(i-1);
+			hashMap1.put(i, current);
 		}
-		System.out.println(myArrayList1);
 		
-		myArrayList2.add(arrayList2.get(0));
-		for(int i = 1; i < arrayList2.size(); i++) {
-			myArrayList2.add((arrayList2.get(i) + myArrayList2.get(i-1)));
+		hashMap2.put(0, stack2[0]);
+		for(int i = 1; i < stack2.length; i++) {
+			int current = stack2[i] + hashMap2.get(i-1);
+			hashMap2.put(i, current);
 		}
-		System.out.println(myArrayList2);
 		
-		myArrayList3.add(arrayList3.get(0));
-		for(int i = 1; i < arrayList3.size(); i++) {
-			myArrayList3.add((arrayList3.get(i) + myArrayList3.get(i-1)));
+		hashMap3.put(0, stack3[0]);
+		for(int i = 1; i < stack3.length; i++) {
+			int current = stack3[i] + hashMap3.get(i-1);
+			hashMap3.put(i, current);
 		}
-		System.out.println(myArrayList3);
 		
-		ArrayList<Integer> longestArrayList = new ArrayList<>();
 		
-		int longestArray = longestOf(myArrayList1, myArrayList2, myArrayList3);
-		if(longestArray == 1)
-			longestArrayList = myArrayList1;
-		if(longestArray == 2)
-			longestArrayList = myArrayList2;
-		if(longestArray == 3)
-			longestArrayList = myArrayList3;
+		System.out.println(hashMap1);
+		System.out.println(hashMap2);
+		System.out.println(hashMap3);
+		System.out.println();
+		
+		// Find the longestHashMap
+		
+		Map<Integer, Integer> longestHashMap = new HashMap<>();
+		
+		int longestHashMapNo = longestOf(hashMap1, hashMap2, hashMap3);
+		
+		if(longestHashMapNo == 1)
+			longestHashMap = hashMap1;
+		if(longestHashMapNo == 2)
+			longestHashMap = hashMap2;
+		if(longestHashMapNo == 3)
+			longestHashMap = hashMap3;
 		
 		// Count Back from end to check match and add to total
 		
@@ -91,16 +100,16 @@ public class EqualStacks_Attempt_2 {
 			}
 		}
 		
-		return stackHeight;
+		return stackHeight;*/
 		
 	}
 
-	private static int longestOf(ArrayList<Integer> arrayList1, ArrayList<Integer> arrayList2,
-			ArrayList<Integer> arrayList3) {
+	private static int longestOf(Map<Integer, Integer> hashMap1, Map<Integer, Integer> hashMap2,
+			Map<Integer, Integer> hashMap3) {
 		
-		int a = arrayList1.size();
-		int b = arrayList2.size();
-		int c = arrayList3.size();
+		int a = hashMap1.size();
+		int b = hashMap2.size();
+		int c = hashMap3.size();
 		
 		System.out.println("arrayList1.size() : " + a);
 		System.out.println("arrayList2.size() : " + b);
