@@ -3,8 +3,6 @@ package equal_stacks;
 import java.util.ArrayList;
 import java.util.Collections;
 
-import javax.swing.plaf.synth.SynthSeparatorUI;
-
 public class EqualStacks_Attempt_2 {
 
 	
@@ -25,7 +23,8 @@ public class EqualStacks_Attempt_2 {
 		ArrayList<Integer> arrayList2 = new ArrayList<>();
 		ArrayList<Integer> arrayList3 = new ArrayList<>();
 		
-		//convert Arrays to Array Lists
+	//convert Arrays to Array Lists
+		
 		for(int index : stack1)
 			arrayList1.add(index);
 		for(int index : stack2)
@@ -33,17 +32,13 @@ public class EqualStacks_Attempt_2 {
 		for(int index : stack3)
 			arrayList3.add(index);
 		
-		// Reverse arrayList - Uncomment for HackerRank submission.
+	// Reverse arrayList - Uncomment for HackerRank submission.
 				
-				Collections.reverse(arrayList1); 
-				Collections.reverse(arrayList2);
-				Collections.reverse(arrayList3);
-		
-				System.out.println(arrayList1);
-				System.out.println(arrayList2);
-				System.out.println(arrayList3);
+		Collections.reverse(arrayList1); 
+		Collections.reverse(arrayList2);
+		Collections.reverse(arrayList3);
 				 
-		// Write method to add up all element of each
+	// Write method to add up all elements of each into a new array
 		
 		ArrayList<Integer> myArrayList1 = new ArrayList<Integer>();
 		ArrayList<Integer> myArrayList2 = new ArrayList<Integer>();
@@ -52,20 +47,22 @@ public class EqualStacks_Attempt_2 {
 		myArrayList1.add(arrayList1.get(0));
 		for(int i = 1; i < arrayList1.size(); i++) {
 			myArrayList1.add((arrayList1.get(i) + myArrayList1.get(i-1)));
-		}
-		System.out.println(myArrayList1);
+		}	
 		
-		myArrayList2.add(arrayList2.get(0));
 		for(int i = 1; i < arrayList2.size(); i++) {
 			myArrayList2.add((arrayList2.get(i) + myArrayList2.get(i-1)));
 		}
-		System.out.println(myArrayList2);
 		
 		myArrayList3.add(arrayList3.get(0));
 		for(int i = 1; i < arrayList3.size(); i++) {
 			myArrayList3.add((arrayList3.get(i) + myArrayList3.get(i-1)));
 		}
+		
+		System.out.println(myArrayList1);
+		System.out.println(myArrayList2);
 		System.out.println(myArrayList3);
+		
+	// Find the longest array of the three
 		
 		ArrayList<Integer> longestArrayList = new ArrayList<>();
 		
@@ -77,7 +74,7 @@ public class EqualStacks_Attempt_2 {
 		if(longestArray == 3)
 			longestArrayList = myArrayList3;
 		
-		// Count Back from end to check match and add to total
+	// Count Back from end to check when stacks equal in height
 		
 		int stackHeight = 0;
 		
@@ -101,10 +98,6 @@ public class EqualStacks_Attempt_2 {
 		int a = arrayList1.size();
 		int b = arrayList2.size();
 		int c = arrayList3.size();
-		
-		System.out.println("arrayList1.size() : " + a);
-		System.out.println("arrayList2.size() : " + b);
-		System.out.println("arrayList3.size() : " + c);
 		
 		if(a > b && a > c)
 			return 1;

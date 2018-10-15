@@ -22,7 +22,7 @@ import java.util.Collections;
  * 
  */
 
-public class EqualStacks {
+public class EqualStacks_Attempt_1 {
 
 	public static void main(String[] args) {
 
