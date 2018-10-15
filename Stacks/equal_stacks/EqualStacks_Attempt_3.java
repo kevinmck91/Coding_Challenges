@@ -2,7 +2,7 @@ package equal_stacks;
 
 import java.util.Stack;
 
-public class EqualStacks_Attempt3 {
+public class EqualStacks_Attempt_3 {
 
 	public static void main(String[] args) {
 		
