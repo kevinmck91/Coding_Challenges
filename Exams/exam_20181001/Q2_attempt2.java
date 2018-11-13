@@ -1,4 +1,4 @@
-package interview_exam;
+package exam_20181001;
 
 import java.util.ArrayList;
 import java.util.Arrays;
