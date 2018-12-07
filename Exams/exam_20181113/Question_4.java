@@ -2,22 +2,29 @@ package exam_20181113;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
 public class Question_4 {
+	
+
+	/**
+	 * 	Almost finished
+	 */
+	
 
 	public static void main(String[] args) {
 
-		String keywords = "breakfast beach citycenter location metro view staff price";
+		String keywords = "breakfast beach citycenter location metro view staff price dog";
 
 		List<Integer> hotel_ids = new ArrayList<>();
 		hotel_ids.add(1);
 		hotel_ids.add(2);
 		hotel_ids.add(1);
-		hotel_ids.add(1);
+		hotel_ids.add(3);
 		hotel_ids.add(2);
 
 		List<String> reviews = new ArrayList<>();
@@ -46,7 +53,7 @@ public class Question_4 {
 				individual_hotel_ids.add(integer);
 			}
 		}
-		System.out.println(individual_hotel_ids);
+		System.out.println("\n Individual Hotel IDs : " + individual_hotel_ids);
 
 		// Create hashMap of the concat of each String
 		Map<Integer, String> hotel_and_reviews = new LinkedHashMap<>();
@@ -65,7 +72,7 @@ public class Question_4 {
 			}
 		}
 
-		System.out.println(hotel_and_reviews);
+		System.out.println("\n Hotel_and_reviews " + hotel_and_reviews);
 
 		// Do a word count of every word in each
 		Map<Integer, Map<String, Integer>> specific_word_count = new LinkedHashMap<>();
@@ -80,9 +87,8 @@ public class Question_4 {
 			specific_word_count.put(individual_hotel_ids.get(i), hashMapTemp);
 
 		}
-		System.out.println(" ");
-		System.out.println(specific_word_count);
-		System.out.println(" ");
+		
+		System.out.println("\n specific_word_count : " + specific_word_count);
 
 		// Create hashMap for hotel Id and Total Count
 		Map<Integer, Integer> hotelID_totalCount = new LinkedHashMap<>();
@@ -93,22 +99,29 @@ public class Question_4 {
 		for (Integer hotelId : individual_hotel_ids) {
 
 			int wordMatches = 0;
-			
+
 			for (String keyword : keyWordArray) {
-				
-				if(specific_word_count.get(hotelId).containsKey(keyword)){
-				
-					wordMatches += specific_word_count.get(hotelId).get(keyword);
-					System.out.println(keyword + " " + wordMatches);
-					
+
+				if (specific_word_count.get(hotelId).containsKey(keyword)) {
+
+					wordMatches += specific_word_count.get(hotelId)
+							.get(keyword);
 				}
-				
-				
-				
+
 			}
 			hotelID_totalCount.put(hotelId, wordMatches);
 		}
-System.out.println(hotelID_totalCount);
+		System.out.println(hotelID_totalCount);
+		
+
+		//Iterate over hashmap, add key of largest value to an array.
+		
+		for (Integer integer : hotelID_totalCount.values()) {
+			
+		}
+	    
+	    
+		
 		return hotel_ids;
 
 	}

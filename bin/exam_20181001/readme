@@ -1,0 +1,27 @@
+Q1.
+
+Write a method to check if two arrays have the same contents
+
+Notes
+	-	An empty input line is considered null
+	-	The order of the array is not important. The number of occurrences is important
+	
+	
+	
+
+Q2.
+
+Two words are matched if they are anagrams.
+Given a set of words, print out all matched words.
+
+- Each set of words should be printed on a separate line.
+- Words that are not matched should not be printed.
+- The output should be alphabetically ordered (across each line and within each line).
+- Beware of bad input data.
+- Beware of duplicate words on input.
+
+
+
+Reflection on Exam
+	-	Read question fully and determine what data structure would be best.
+	-	Know when a question requires complicated data structure or simple array manipulation.
