@@ -1,16 +1,16 @@
-package application;
+package hotel_booking_system;
 
 public class Room {
 
-	private double 	reference;
-	private String 	roomType;
-	private double		minGuests;
-	private double		maxGuests;
-	private	double		price;
-	private	double 	pricePU;
-	private	double		pricePP;
-	private	String	priceModel;
-	
+	private double reference;
+	private String roomType;
+	private double minGuests;
+	private double maxGuests;
+	private double price;
+	private double pricePU;
+	private double pricePP;
+	private String priceModel;
+
 	public Room(double reference, String roomType, double minGuests, double maxGuests, double price, String priceModel) {
 		this.reference = reference;
 		this.roomType = roomType;
@@ -18,11 +18,11 @@ public class Room {
 		this.maxGuests = maxGuests;
 		this.price = price;
 		this.priceModel = priceModel;
-		
-		if(priceModel.equals("pu")) {
+
+		if (priceModel.equals("pu")) {
 			this.pricePU = price;
 		}
-		if(priceModel.equals("pp")) {
+		if (priceModel.equals("pp")) {
 			this.pricePP = price;
 		}
 	}
@@ -90,7 +90,5 @@ public class Room {
 	public void setPriceModel(String priceModel) {
 		this.priceModel = priceModel;
 	}
-	
-	
-	
+
 }

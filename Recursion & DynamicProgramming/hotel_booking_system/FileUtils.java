@@ -1,4 +1,4 @@
-package application;
+package hotel_booking_system;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -11,13 +11,15 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
+//This class reads in the ExcelFile from the drive
+
 public class FileUtils {
 	
 	public List getRoomsFromExcel() {
 		
-		String filePath = "C:\\Users\\kevmc\\git\\Hackerrank_Challenges\\Hotel Booking System Question 2\\inventory.xlsx";
+		String filePath = "C:\\Users\\kevmc\\git\\Hackerrank_Challenges\\Recursion & DynamicProgramming\\inventory.xlsx";
 		
-		List roomList = new ArrayList();
+		ArrayList roomArrayList = new ArrayList();
 		
 		
 		try {
@@ -43,7 +45,7 @@ public class FileUtils {
 				String priceModel 	= row.getCell(7).getStringCellValue();
 
 				// Add newly created room to the list of rooms
-				roomList.add(new Room(reference, roomType, minGuests, maxGuests, price, priceModel));
+				roomArrayList.add(new Room(reference, roomType, minGuests, maxGuests, price, priceModel));
 				
 			}
 			
@@ -56,7 +58,7 @@ public class FileUtils {
 		}
 		
 		
-		return roomList;
+		return roomArrayList;
 		
 		
 		
