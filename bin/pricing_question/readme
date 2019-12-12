@@ -1,4 +1,0 @@
-A person has only a certain amount to spend, and he wants to maximize the number of toys he buys with this money. Given a list of prices and an amount to spend, what is the maximum number of toys Mark can buy?
-	  
-	  Eg. prices = [1,2,3,4] , k = 7 -> he can buy 3 toys and spend 6 euro
-	  Return the Max number of toys that can be bought.
