@@ -1,0 +1,30 @@
+
+
+Q1.
+
+	Given 3 inputs, Check if the triangle is valid
+
+	
+
+Q2.
+
+	Output a delta encoding for an array. In a delta encoding, the first element is as-is, the next element is the difference of the two previous.
+	If a value doesn't fit in a signed byte, (-127 < x < 127) output the escape character (-128) before the value  
+	
+
+Q3.
+
+	There might be more calls
+	to customer service than the number of customer service executives can
+	manage. 
+	
+	Given that our
+	current number of customer care executives is X, determine how many more
+	people we would need to hire, to make sure that our customers would not have to
+	wait during peak hours 0.e. that e don't have more phone calls than we have
+	customer service executives).
+	
+Q4. 
+
+	Given a list of Hotel Id's and corresponding list of customer reviews associated with each hotel,
+	Determine which hotel is the best choice depending on search Terms entered 
