@@ -33,3 +33,9 @@ target/
 # End of https://www.gitignore.io/api/java,java-web
 
 bin/
+
+# Eclipse Core      
+.project
+
+# JDT-specific (Eclipse Java Development Tools)     
+.classpath
