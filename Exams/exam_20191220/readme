@@ -1,0 +1,17 @@
+DynaTrace
+
+Q1
+
+	Given an array of Strings.
+	Find the largest string combination where no combined string has a repeating letter
+	EG 	: Given { abc, yyy, wxyz, 123}
+		: The longest string with no repeating digits is "abc123", "123abc", "123wxyz" etc
+		: Answer : String Length = 7
+
+
+Q2
+
+	Given a number N in the range [-8000, 8000]
+	Find the maximum number when the digit 5 is inserted in N
+	EG: Given 670 should return 6750
+	EG: Given -999 should return -5999
