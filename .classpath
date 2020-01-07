@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="Arrays &amp; Strings"/>
+	<classpathentry kind="src" path="Mathematical"/>
+	<classpathentry kind="src" path="Sets &amp; Maps"/>
+	<classpathentry kind="src" path="Stacks"/>
+	<classpathentry kind="src" path="Exams"/>
+	<classpathentry kind="src" path="Sorting"/>
+	<classpathentry kind="src" path="Input Output"/>
+	<classpathentry kind="src" path="Recursion &amp; DynamicProgramming"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Apache POI">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
