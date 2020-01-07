@@ -1,3 +1,4 @@
+package exam_company1;
 import java.util.*;
 
 public class accenture {

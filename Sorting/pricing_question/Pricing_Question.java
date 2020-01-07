@@ -14,6 +14,8 @@ public class Pricing_Question {
 	 * Return the Max number of toys that can be bought.
 	 * 
 	 */
+	
+	
 	public static void main(String[] args) {
 
 		int[] array = { 3,7,6,9,3,6,9,3,7,9,6,3,6,9,0,5,4,8,0 };

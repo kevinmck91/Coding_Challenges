@@ -19,9 +19,9 @@ public class palindrom_strings {
 		 * 
 		 */
 		
-		
+		// TODO: Begin
 		// Inefficient method - Split String into all SubString and test individually
-		// 
+		 
 
 	}
 

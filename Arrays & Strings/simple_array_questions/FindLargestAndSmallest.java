@@ -25,7 +25,7 @@ public class FindLargestAndSmallest {
 			arraylist.add(integer);
 		}
 		
-		Collections.sort(arraylist);
+		Collections.sort(arraylist);		// uses Quicksort. order(n.logn)
 		
 		System.out.println("Lowest : " + arraylist.get(0) + ". Highest : " + arraylist.get(arraylist.size()-1));
 		

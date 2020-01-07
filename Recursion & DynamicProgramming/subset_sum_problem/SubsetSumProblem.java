@@ -2,7 +2,7 @@ package subset_sum_problem;
 
 public class SubsetSumProblem {
 
-	// use Dynamic Programming to find if a subset of numbers add up to a given number
+	// Use Dynamic Programming to find if a subset of numbers add up to a given number
 
 	public static void main(String[] args) {
 
